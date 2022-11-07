@@ -1,27 +1,38 @@
 import React from "react";
 import ReactDom from "react-dom";
 
-// stateless functional component
-// always return JSX
+// JSX rules
+// return single statement
+// div / section / article or React.Fragment
+// use camelCase for html attribute
+// className instead of class
+// close every element
+// formatting
 
-function Greeting() {
+function BookList() {
   return (
-    <div>
-      <h1>This is Michelle and this is my first component</h1>
-    </div>
+    <section>
+      <Book />
+    </section>
   );
 }
 
-// const Greeting = () => {
-//   return React.createElement(
-//     "div",
-//     {},
-//     React.createElement(
-//       "h1",
-//       {},
-//       "This is Michelle and this is my first component"
-//     )
-//   );
-// }
+const Book = () => {
+  return <article>
+    <Image />
+    <Title />
+    <Author />
+  </article>
+}
 
-ReactDom.render(<Greeting/>,document.getElementById('root'));
+const Image = () => (
+  <img
+    src="https://images-na.ssl-images-amazon.com/images/I/81qROMFiwmL._AC_UL210_SR195,210_.jpg"
+    alt=""
+  />
+);
+
+const Title = () => <h1>Little Blue Truck's Halloween</h1>
+const Author = () => <h4>Alice Schertle</h4>;
+
+ReactDom.render(<BookList />, document.getElementById("root"));
