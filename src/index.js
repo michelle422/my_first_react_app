@@ -1,24 +1,22 @@
 import React from "react";
 import ReactDom from "react-dom";
-
-// JSX rules
-// return single statement
-// div / section / article or React.Fragment
-// use camelCase for html attribute
-// className instead of class
-// close every element
-// formatting
+import './index.css';
 
 function BookList() {
   return (
-    <section>
+    <section className="booklist">
+      <Book />
+      <Book />
+      <Book />
+      <Book />
+      <Book />
       <Book />
     </section>
   );
 }
 
 const Book = () => {
-  return <article>
+  return <article className="book">
     <Image />
     <Title />
     <Author />
