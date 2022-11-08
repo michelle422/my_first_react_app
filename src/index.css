@@ -5,13 +5,17 @@
 }
 
 body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background: #A7D2CB;
     color: #FFFFD2;
 }
 
 img {
-    width: 150px;
+    width: 100px;
+}
+
+button {
+    margin: 10px;
 }
 
 .booklist {
@@ -25,6 +29,7 @@ img {
 @media screen and (min-width:768px) {
     .booklist {
         grid-template-columns: repeat(3, 1fr);
+        /* align-items:flex-start; */
     }
 }
 
@@ -42,4 +47,13 @@ img {
     color: #AA96DA;
     font-size: 0.75rem;
     margin-top: 0.25rem;
+}
+
+.book p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin-top: 0.5rem;
+}
+
+.book:hover {
+    background: turquoise;
 }
